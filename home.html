@@ -25,33 +25,63 @@
 .button-box {
   background-color: #007bff;
   color: white;
-  padding: 20px 30px;
-  border-radius: 12px;
+  padding: 25px;
+  border-radius: 20px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-box img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
 }
 
 .button-box:hover {
   background-color: #0056b3;
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
 @media screen and (max-width: 600px) {
   .button-box {
+    width: 120px;
+    height: 120px;
     font-size: 16px;
-    padding: 15px 25px;
+    padding: 20px;
+  }
+  .button-box img {
+    width: 30px;
+    height: 30px;
   }
 }
 
   </style>
 </head>
 <body>  <h1>Select Section</h1>  <div class="button-grid">
-    <a href="test.html" class="button-box">Test</a>
-    <a href="notes.html" class="button-box">Notes</a>
-    <a href="videos.html" class="button-box">Lectures</a>
-    <a href="contact.html" class="button-box">Contact</a>
+    <a href="test.html" class="button-box">
+      <img src="icons/test.png" alt="Test">
+      Test
+    </a>
+    <a href="notes.html" class="button-box">
+      <img src="icons/notes.png" alt="Notes">
+      Notes
+    </a>
+    <a href="videos.html" class="button-box">
+      <img src="icons/lecture.png" alt="Lectures">
+      Lectures
+    </a>
+    <a href="contact.html" class="button-box">
+      <img src="icons/contact.png" alt="Contact">
+      Contact
+    </a>
   </div></body>
 </html>
