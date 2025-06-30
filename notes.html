@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Notes - Nursing with Prince</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <title>Notes Page - Protected</title>
+  <script>
+    const correctPassword = "Unizona";
+    let userPassword = prompt("Enter password to access this page:");
+    if (userPassword !== correctPassword) {
+      document.write("<h2 style='color:red; text-align:center;'>Access Denied ❌</h2>");
+      throw new Error("Unauthorized Access");
+    }
+  </script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f5f8fa;
       text-align: center;
-      padding: 40px;
+      padding-top: 40px;
     }
-
-    h1 {
-      color: #333;
-    }
-
-    .section {
-      margin-top: 30px;
-    }
-
     .note-button {
       display: inline-block;
-      padding: 15px 30px;
-      margin: 15px;
+      margin: 10px;
+      padding: 15px 25px;
       background-color: #007bff;
       color: white;
-      border-radius: 10px;
       text-decoration: none;
+      border-radius: 10px;
       font-size: 18px;
     }
-
     .note-button:hover {
       background-color: #0056b3;
     }
   </style>
 </head>
+
 <body>
 
-  <h1>Select Notes Type</h1>
+  <h1>Welcome to Notes 📘</h1>
+  <p>Only Unizona students can access this section.</p>
 
-  <div class="section">
-    <a href="classppt/index.html" class="note-button">Class PPT</a>
-    <a href="handwritten/index.html" class="note-button">Handwritten Notes</a>
-  </div>
+  <a href="classppt.html" class="note-button">Class PPT</a>
+  <a href="handwritten.html" class="note-button">Handwritten Notes</a>
 
 </body>
 </html>
